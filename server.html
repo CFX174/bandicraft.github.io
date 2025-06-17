@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Servidor - BandiCraft Network</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <header>
+        <img src="../assets/img/Bandi_Craft_Logo.png" alt="BandiCraft Logo" class="logo">
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="news.html">Noticias</a>
+            <a href="server.html">Servidor</a>
+            <a href="about.html">Sobre Nosotros</a>
+            <a href="support.html">Soporte</a>
+            <a href="#" onclick="toggleLogin()">Login</a>
+            <a href="#" onclick="toggleRegister()">Register</a>
+            <a href="#" id="logout" style="display:none;" onclick="logout()">Logout</a>
+        </nav>
+    </header>
+    
+    <main>
+        <h1>Información del Servidor</h1>
+        <p><strong>IP:</strong> play.bandicraft.net</p>
+        <p><strong>Versiones:</strong> 1.18.x - 1.20.x</p>
+
+        <section class="modalidades">
+            <h2>Modalidades Disponibles</h2>
+            <div class="modo">
+                <h3>Survival Custom</h3>
+                <p>Mundo survival con economía, rangos, mazmorras y eventos especiales.</p>
+            </div>
+            <div class="modo">
+                <h3>Skyblock</h3>
+                <p>Comienza en una isla flotante y conviértela en un imperio.</p>
+            </div>
+            <div class="modo">
+                <h3>Oneblock</h3>
+                <p>Rompe un solo bloque infinito que genera recursos sin parar.</p>
+            </div>
+            <div class="modo">
+                <h3>Factions</h3>
+                <p>Crea tu clan, conquista territorios y domina el servidor.</p>
+            </div>
+        </section>
+
+        <!-- Login Modal -->
+        <div id="loginModal" class="login-modal">
+            <div class="login-content">
+                <span class="close" onclick="toggleLogin()">&times;</span>
+                <h2>Iniciar Sesión</h2>
+                <input type="text" id="loginUser" placeholder="Usuario">
+                <input type="password" id="loginPass" placeholder="Contraseña">
+                <p id="loginError" class="error"></p>
+                <button class="btn" onclick="login()">Entrar</button>
+            </div>
+        </div>
+
+        <!-- Register Modal -->
+        <div id="registerModal" class="login-modal">
+            <div class="login-content">
+                <span class="close" onclick="toggleRegister()">&times;</span>
+                <h2>Registrarse</h2>
+                <input type="text" id="registerUser" placeholder="Usuario">
+                <input type="password" id="registerPass" placeholder="Contraseña">
+                <p id="registerError" class="error"></p>
+                <button class="btn" onclick="register()">Registrar</button>
+            </div>
+        </div>
+    </main>
+
+    <footer><p>&copy; 2025 BandiCraft Network</p></footer>
+
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>
